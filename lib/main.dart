@@ -14,10 +14,24 @@ class MyApp extends StatefulWidget {
 class MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
+
+    TextStyle textStyle = Theme.of(context).textTheme.title;
+
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.indigo,
+        accentColor: Colors.indigoAccent,
+
+      ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Spell checker'),
+          title: Center(
+            child: Text(
+              'Spell checker',
+
+            ),
+          ),
         ),
         body: firstpage(),
       ),
